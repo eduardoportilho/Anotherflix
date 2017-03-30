@@ -1,3 +1,5 @@
+/* global React ReactDOM */
+
 var div = React.DOM.div
 var h1 = React.DOM.h1
 
@@ -13,7 +15,7 @@ var MyTitle = React.createClass({
 
 var MyTitleFactory = React.createFactory(MyTitle)
 
-var MyFirstComponent = React.createClass({  
+var MyFirstComponent = React.createClass({
   render: function () {
     return (
       div(null,
