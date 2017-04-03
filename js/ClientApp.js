@@ -13,8 +13,8 @@ var MyFirstComponent = React.createClass({
       div(null,
         MyTitleFactory({title: 'Props are the best', color: 'peru'}),
         MyTitleFactory({title: 'semicolons are the best', color: 'tomato'}),
-        MyTitleFactory({title: 'yada', color: 'darkgoldenrod'}),
-        MyTitleFactory({title: 'qqqq', color: 'papayawhip'})
+        MyTitleFactory({title: 'yada', color: 'cornflowerblue'}),
+        MyTitleFactory({title: 'qqqq', color: 'forestgreen'})
       )
     )
   }
