@@ -5,7 +5,7 @@ import preload from '../public/data.json'
 const Search = React.createClass({
   getInitialState () {
     return {
-      searchTerm: 'this is the default searchTerm'
+      searchTerm: ''
     }
   },
   handleSearchTermChange (event) {
@@ -13,17 +13,25 @@ const Search = React.createClass({
   },
   render () {
     return (
-      <div>
+      <div className='search'>
         <header>
-          <h1>{this.state.searchTerm}</h1>
+          <h1>svideo</h1>
           <input onChange={this.handleSearchTermChange} value={this.state.searchTerm} type='text' placeholder='Search' />
         </header>
-        <div className='search'>
-          {preload.shows.map((show) => {
-            return (
-              <ShowCard key={show.imdbID} {...show} />
-            )
-          })}
+        <div>
+          {
+            preload.shows
+            .filter((show) => {
+              return `${show.title} ${show.title}`
+                .toUpperCase()
+                .indexOf(this.state.searchTerm.toUpperCase()) >= 0
+            })
+            .map((show) => {
+              return (
+                <ShowCard key={show.imdbID} {...show} />
+              )
+            })
+          }
         </div>
       </div>
     )
