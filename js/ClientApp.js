@@ -4,6 +4,7 @@ import { BrowserRouter, Match } from 'react-router'
 import Landing from './Landing'
 import Search from './Search'
 import Details from './Details'
+import preload from '../public/data.json'
 
 const App = React.createClass({
   render () {
@@ -11,7 +12,7 @@ const App = React.createClass({
       <BrowserRouter>
         <div className='app'>
           <Match exactly pattern='/' component={Landing} />
-          <Match pattern='/search' component={Search} />
+          <Match pattern='/search' component={(props) => <Search shows={preload.shows} {...props} />} />
           <Match pattern='/details/:id' component={Details} />
         </div>
       </BrowserRouter>

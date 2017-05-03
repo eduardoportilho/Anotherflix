@@ -1,8 +1,14 @@
 import React from 'react'
 import ShowCard from './ShowCard'
-import preload from '../public/data.json'
 
+const { shape, arrayOf, string } = React.PropTypes
 const Search = React.createClass({
+  propTypes: {
+    shows: arrayOf(shape({
+      title: string,
+      description: string
+    }))
+  },
   getInitialState () {
     return {
       searchTerm: ''
@@ -20,17 +26,17 @@ const Search = React.createClass({
         </header>
         <div>
           {
-            preload.shows
-            .filter((show) => {
-              return `${show.title} ${show.title}`
-                .toUpperCase()
-                .indexOf(this.state.searchTerm.toUpperCase()) >= 0
-            })
-            .map((show) => {
-              return (
-                <ShowCard key={show.imdbID} {...show} />
-              )
-            })
+            this.props.shows
+              .filter((show) => {
+                return `${show.title} ${show.title}`
+                  .toUpperCase()
+                  .indexOf(this.state.searchTerm.toUpperCase()) >= 0
+              })
+              .map((show) => {
+                return (
+                  <ShowCard key={show.imdbID} {...show} />
+                )
+              })
           }
         </div>
       </div>
