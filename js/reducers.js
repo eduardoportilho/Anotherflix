@@ -1,10 +1,9 @@
 import { SET_SEARCH_TERM } from './actions'
 
 const DEFAULT_STATE = {
-  searchTerm: ''
+  searchTerm: 'Random'
 }
 
-// new reducer
 const setSearchTerm = (state, action) => {
   const newState = {}
   Object.assign(newState, state, {searchTerm: action.searchTerm})
