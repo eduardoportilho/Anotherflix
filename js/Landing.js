@@ -5,9 +5,12 @@ import { setSearchTerm } from './actionCreators'
 import '../public/normalize.css'
 import '../public/style.css'
 
-const { string, func } = React.PropTypes
+const { string, func, object } = React.PropTypes
 
 const Landing = React.createClass({
+  contextTypes: {
+    router: object
+  },
   propTypes: {
     searchTerm: string,
     dispatch: func
@@ -15,11 +18,17 @@ const Landing = React.createClass({
   handleSearchTermChange (event) {
     this.props.dispatch(setSearchTerm(event.target.value))
   },
+  handleSearchSubmit (event) {
+    event.preventDefault()
+    this.context.router.transitionTo('/search')
+  },
   render () {
     return (
       <div className='landing'>
         <h1>svideo</h1>
-        <input value={this.props.searchTerm} onChange={this.handleSearchTermChange} type='text' placeholder='Search' />
+        <form onSubmit={this.handleSearchSubmit}>
+          <input value={this.props.searchTerm} onChange={this.handleSearchTermChange} type='text' placeholder='Search' />
+        </form>
         <Link to='/search' className='browse-all'>or Browse All</Link>
       </div>
     )
