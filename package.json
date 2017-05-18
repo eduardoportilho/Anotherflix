@@ -11,7 +11,8 @@
     "update-test": "npm run test -- -u",
     "lint": "eslint js/**/* webpack.config.js",
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "run-server": "env NODE_ENV=server node server.js"
   },
   "dependencies": {
     "axios": "0.15.2",
