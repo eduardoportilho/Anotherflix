@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { setSearchTerm } from './actionCreators'
-import '../public/normalize.css'
-import '../public/style.css'
 
 const { string, func, object } = React.PropTypes
 

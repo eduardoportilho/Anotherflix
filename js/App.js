@@ -8,19 +8,18 @@ import Details from './Details'
 import preload from '../public/data.json'
 
 const App = () => {
-    return (
-      <Provider store={store}>
-        <div className='app'>
-          <Match exactly pattern='/' component={Landing} />
-          <Match pattern='/search' component={(props) => <Search shows={preload.shows} {...props} />} />
-          <Match pattern='/details/:id' component={(props) => {
-            const show = preload.shows.filter((show) => props.params.id === show.imdbID)
-            return <Details show={show[0]} {...props} />
-          }} />
-        </div>
-      </Provider>
-    )
-  }
+  return (
+    <Provider store={store}>
+      <div className='app'>
+        <Match exactly pattern='/' component={Landing} />
+        <Match pattern='/search' component={(props) => <Search shows={preload.shows} {...props} />} />
+        <Match pattern='/details/:id' component={(props) => {
+          const show = preload.shows.filter((show) => props.params.id === show.imdbID)
+          return <Details show={show[0]} {...props} />
+        }} />
+      </div>
+    </Provider>
+  )
 }
 
 export default App
