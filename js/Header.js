@@ -32,7 +32,7 @@ const Header = React.createClass({
       <header>
         <h1>
           <Link to='/'>
-            svideo
+            Anotherflix
           </Link>
         </h1>
         {utilSpace}
