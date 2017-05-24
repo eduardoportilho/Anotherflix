@@ -124,7 +124,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/public/";
+/******/ 	__webpack_require__.p = "/Anotherflix/public/";
 
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -603,7 +603,7 @@ eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() { return
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(1);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(8);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App__ = __webpack_require__(22);\n\n\n\n\n\n__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__[\"render\"])(__WEBPACK_IMPORTED_MODULE_0_react__[\"default\"].createElement(\n  __WEBPACK_IMPORTED_MODULE_2_react_router__[\"BrowserRouter\"],\n  null,\n  __WEBPACK_IMPORTED_MODULE_0_react__[\"default\"].createElement(__WEBPACK_IMPORTED_MODULE_3__App__[\"a\" /* default */], null)\n), document.getElementById('app'));\n\n//////////////////\n// WEBPACK FOOTER\n// ./js/ClientApp.js\n// module id = 68\n// module chunks = 3\n\n//# sourceURL=webpack:///./js/ClientApp.js?");
+eval("/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(1);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(8);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App__ = __webpack_require__(22);\n\n\n\n\n\n__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__[\"render\"])(__WEBPACK_IMPORTED_MODULE_0_react__[\"default\"].createElement(\n  __WEBPACK_IMPORTED_MODULE_2_react_router__[\"BrowserRouter\"],\n  { basename: '/Anotherflix' },\n  __WEBPACK_IMPORTED_MODULE_0_react__[\"default\"].createElement(__WEBPACK_IMPORTED_MODULE_3__App__[\"a\" /* default */], null)\n), document.getElementById('app'));\n\n//////////////////\n// WEBPACK FOOTER\n// ./js/ClientApp.js\n// module id = 68\n// module chunks = 3\n\n//# sourceURL=webpack:///./js/ClientApp.js?");
 
 /***/ }
 /******/ ]);

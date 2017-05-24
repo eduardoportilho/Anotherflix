@@ -30,7 +30,7 @@ const Details = React.createClass({
     if (this.props.omdbData.imdbRating) {
       rating = <h3>{this.props.omdbData.imdbRating}</h3>
     } else {
-      rating = <img src='/public/img/loading.png' alt='loading indicator' />
+      rating = <img src='/Anotherflix/public/img/loading.png' alt='loading indicator' />
     }
     return (
       <div className='details'>
@@ -39,7 +39,7 @@ const Details = React.createClass({
           <h1>{title}</h1>
           <h2>({year})</h2>
           {rating}
-          <img src={`/public/img/posters/${poster}`} />
+          <img src={`/Anotherflix/public/img/posters/${poster}`} />
           <p>{description}</p>
         </section>
         <div>

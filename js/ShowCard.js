@@ -15,7 +15,7 @@ const ShowCard = React.createClass({
     return (
       <Link to={`/details/${imdbID}`}>
         <div className='show-card'>
-          <img src={`/public/img/posters/${poster}`} />
+          <img src={`/Anotherflix/public/img/posters/${poster}`} />
           <div>
             <h3>{title}</h3>
             <h4>({year})</h4>
